@@ -46,7 +46,7 @@ module RedirectTo
   private
 
     LOCATION = 'Location'
-    STATUS = 308
+    STATUS = 307
 
     def actual_location
       actual_headers[LOCATION]

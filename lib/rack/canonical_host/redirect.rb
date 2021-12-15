@@ -29,7 +29,7 @@ module Rack
       end
 
       def response
-        [308, headers, [HTML_TEMPLATE % new_url]]
+        [307, headers, [HTML_TEMPLATE % new_url]]
       end
 
     protected
