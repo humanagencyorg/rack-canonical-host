@@ -7,7 +7,7 @@ module Rack
       HTML_TEMPLATE = <<-HTML.gsub(/^\s+/, '')
         <!DOCTYPE html>
         <html lang="en-US">
-          <head><title>301 Moved Permanently</title></head>
+          <head><title>308 Moved Permanently</title></head>
           <body>
             <h1>Moved Permanently</h1>
             <p>The document has moved <a href="%s">here</a>.</p>
@@ -29,7 +29,7 @@ module Rack
       end
 
       def response
-        [301, headers, [HTML_TEMPLATE % new_url]]
+        [308, headers, [HTML_TEMPLATE % new_url]]
       end
 
     protected
